@@ -6,7 +6,7 @@ export default function Portfolio() {
     { img: "/work1.png", video: "/work1.mp4", title: "Animation Site" },
     { img: "/work2.png", video: "/work2.mp4", title: "Fitness Site" },
     { img: "/work3.png", video: "/work3.mp4", title: "Fully Animated Site" },
-    { img: "/work4.png", video: "/work4.mp4", title: "Lazarey Site" },
+    { img: "/work4.png", video: "/work4.mp4", title: "Lazarey" },
     { img: "/work5.png", video: "/work5.mp4", title: "Sundown Site" },
     { img: "/work6.png", video: "/work6.mp4", title: "Hair Stylish Site" },
   ];
@@ -47,29 +47,16 @@ export default function Portfolio() {
       </div>
 
       {/* Video Popup */}
-    <AnimatePresence>
+     <AnimatePresence>
   {activeWork && (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.8 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
     >
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8, rotate: -15 }}   // 🔥 Rotate start
-        animate={{ opacity: 1, scale: 1, rotate: 0 }}       // ✅ Normal position
-        exit={{ opacity: 0, scale: 0.8, rotate: 15 }}       // ❌ Rotate close
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="
-          relative 
-          w-screen h-screen
-          md:w-[80%] md:h-[80%]
-          bg-black 
-          overflow-hidden
-          rounded-none md:rounded-lg
-        "
-      >
+      <div className="relative bg-black rounded-lg shadow-2xl overflow-hidden w-[95%] h-[40vh]">
         {/* Close Button */}
         <button
           onClick={() => setActiveWork(null)}
@@ -79,19 +66,18 @@ export default function Portfolio() {
         </button>
 
         {/* Video */}
-        <motion.video
+        <video
           src={activeWork.video}
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-contain md:object-cover"
+          className="w-full h-full object-cover z-0"
         />
-      </motion.div>
+      </div>
     </motion.div>
   )}
 </AnimatePresence>
-
 
 
       {/* Show More Button */}
