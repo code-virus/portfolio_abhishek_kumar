@@ -47,16 +47,29 @@ export default function Portfolio() {
       </div>
 
       {/* Video Popup */}
-     <AnimatePresence>
+    <AnimatePresence>
   {activeWork && (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.8 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50"
     >
-      <div className="relative bg-black rounded-lg shadow-2xl overflow-hidden w-[80%] h-[80%]">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, rotate: -15 }}   // 🔥 Rotate start
+        animate={{ opacity: 1, scale: 1, rotate: 0 }}       // ✅ Normal position
+        exit={{ opacity: 0, scale: 0.8, rotate: 15 }}       // ❌ Rotate close
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="
+          relative 
+          w-screen h-screen
+          md:w-[80%] md:h-[80%]
+          bg-black 
+          overflow-hidden
+          rounded-none md:rounded-lg
+        "
+      >
         {/* Close Button */}
         <button
           onClick={() => setActiveWork(null)}
@@ -66,18 +79,19 @@ export default function Portfolio() {
         </button>
 
         {/* Video */}
-        <video
+        <motion.video
           src={activeWork.video}
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover z-0"
+          className="w-full h-full object-contain md:object-cover"
         />
-      </div>
+      </motion.div>
     </motion.div>
   )}
 </AnimatePresence>
+
 
 
       {/* Show More Button */}
