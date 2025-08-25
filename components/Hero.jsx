@@ -42,7 +42,7 @@ export default function AboutMe() {
         {/* Left Image */}
         <div className="flex-1 flex justify-start ">
           <img
-            src="/profile.png"
+            src="/profile.jpg"
             alt="profile"
             className="rounded-lg shadow-lg w-72 md:w-80"
           />

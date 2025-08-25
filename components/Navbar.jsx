@@ -353,7 +353,7 @@ export default function Navbar() {
       <main className="flex flex-col items-center justify-center text-center flex-grow px-4 mt-32">
         <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 hover:scale-110 duration-300 transition cursor-pointer rounded-full overflow-hidden border-4 border-gray-700 shadow-xl mb-6">
           <img
-            src="/profile.png"
+            src="/profile.jpg"
             alt="profile"
             className="w-full h-full object-cover"
           />
