@@ -56,25 +56,26 @@ export default function Portfolio() {
       transition={{ duration: 0.3 }}
       className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
     >
-      <div className="relative bg-black rounded-lg shadow-2xl overflow-hidden w-[95%] h-[40vh]">
-        {/* Close Button */}
-        <button
-          onClick={() => setActiveWork(null)}
-          className="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full z-10"
-        >
-          ✕
-        </button>
+      <div className="relative bg-black rounded-lg shadow-2xl overflow-hidden w-[95%] h-[40vh] md:h-[70vh]">
+  {/* Close Button */}
+  <button
+    onClick={() => setActiveWork(null)}
+    className="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full z-10"
+  >
+    ✕
+  </button>
 
-        {/* Video */}
-        <video
-          src={activeWork.video}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover z-0"
-        />
-      </div>
+  {/* Video */}
+  <video
+    src={activeWork.video}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover z-0"
+  />
+</div>
+
     </motion.div>
   )}
 </AnimatePresence>
