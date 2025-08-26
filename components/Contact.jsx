@@ -31,7 +31,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id="contact" className="bg-white text-black py-20">
+    <section id="contact" className="bg-white text-black overflow-hidden py-20">
       <div className="max-w-[70vw] mx-auto grid md:grid-cols-2 gap-10 px-6">
         {/* Left side */}
         <div ref={leftRef}>

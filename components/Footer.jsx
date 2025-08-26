@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
 
         {/* Right Side (Subscribe Box) */}
-        <div className="flex items-center bg-zinc-200 rounded-full overflow-hidden w-full md:w-auto shadow-md">
+        <div className="flex items-center bg-zinc-200 rounded-full overflow-hidden w-full mb-10 md:w-auto shadow-md">
           <span className="px-4 text-gray-400">
             <i className="fas fa-user"></i>
           </span>

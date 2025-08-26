@@ -87,11 +87,11 @@ export default function Services() {
           opacity: 1,
           y: 0,
           duration: 0.8,
-          delay: i * 0.2,
+          delay: i * -0.0,
           ease: "power3.out",
           scrollTrigger: {
             trigger: card,
-            start: "top 85%",
+            start: "top 90%",
             toggleActions: "play none none none",
           },
         }
