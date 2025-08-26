@@ -49,15 +49,15 @@ export default function Contact() {
           <ul className="space-y-6">
             <li className="flex items-center gap-3">
               <span className="text-xl">📧</span>
-              <span>greatstackdev@gmail.com</span>
+              <span>abhikumar902453@gmail.com</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-xl">📞</span>
-              <span>+772-825-524</span>
+              <span>+756-879-4781</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-xl">📍</span>
-              <span>CA, United States</span>
+              <span>Jaipur, Rajasthan</span>
             </li>
           </ul>
         </div>
