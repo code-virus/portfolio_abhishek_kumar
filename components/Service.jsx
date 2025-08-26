@@ -135,7 +135,7 @@ export default function Services() {
   return (
     <section id="services" className="bg-white min-h-screen text-black py-20">
       {/* heading */}
-      <div className="text-center mb-14">
+      <div className="text-center px-8 mb-14 ">
         <h2 className="text-5xl md:text-6xl font-extrabold mb-24">
           My{" "}
           <span className="relative">
