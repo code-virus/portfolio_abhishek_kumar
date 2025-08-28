@@ -295,7 +295,7 @@ export default function Navbar() {
         {/* CTA */}
         <button
           onClick={() => setShowPopup(true)}
-          className="hidden md:block bg-gradient-to-r from-pink-500 to-orange-500 px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base cursor-pointer"
+          className="hidden md:block bg-gradient-to-r to-purple-500 from-pink-500 px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base cursor-pointer"
         >
           Connect With Me
         </button>
@@ -343,7 +343,7 @@ export default function Navbar() {
             setShowPopup(true);
             setMenuOpen(false);
           }}
-          className="bg-gradient-to-r from-pink-500 to-orange-500 px-4 py-2 rounded-full text-sm text-white"
+          className="bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-full text-sm text-white"
         >
           Connect With Me
         </button>
